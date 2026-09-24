@@ -1,8 +1,8 @@
 """Reference tests for the configured Linux target reached through SSH."""
 
-from embedded_framework.devices import Capability
-from embedded_framework.embedded_test_base import EmbeddedTestCase
-from embedded_framework.helpers.he_shell import CommandResult
+from embedded_test_framework.devices import Capability
+from embedded_test_framework.embedded_test_base import EmbeddedTestCase
+from embedded_test_framework.helpers.he_shell import CommandResult
 
 
 class TestLinuxSshReference(EmbeddedTestCase):

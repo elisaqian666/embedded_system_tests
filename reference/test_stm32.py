@@ -3,10 +3,10 @@
 import os
 from unittest import SkipTest
 
-from embedded_framework.communication.serial import SerialTransport
-from embedded_framework.devices import Capability
-from embedded_framework.devices.mcu import Stm32Device
-from embedded_framework.embedded_test_base import EmbeddedTestCase
+from embedded_test_framework.communication.serial import SerialTransport
+from embedded_test_framework.devices import Capability
+from embedded_test_framework.devices.mcu import Stm32Device
+from embedded_test_framework.embedded_test_base import EmbeddedTestCase
 
 class TestStm32Reference(EmbeddedTestCase):
     dut_name = "serial_dut"
@@ -37,6 +37,7 @@ class TestStm32Reference(EmbeddedTestCase):
         # GIVEN a Runtime-owned STM32 serial transport
         # WHEN the test starts
         # THEN the transport is already connected
+        # test
         self.logger.info("Verify if the Serial Transport is connected...")
         self.assertTrue(self.transport.is_connected)
 

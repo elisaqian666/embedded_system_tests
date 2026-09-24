@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from embedded_framework.embedded_test_base import EmbeddedTestCase
+from embedded_test_framework.embedded_test_base import EmbeddedTestCase
 import logging
 
 class TestScpUpload(EmbeddedTestCase):

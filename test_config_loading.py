@@ -1,7 +1,7 @@
 from pathlib import Path
 import runpy
 
-from embedded_framework.configurator.configurator_dut import load_mapping
+from embedded_test_framework.configurator.configurator_dut import load_mapping
 
 
 def test_shared_configuration_loads_multiple_duts(monkeypatch) -> None:

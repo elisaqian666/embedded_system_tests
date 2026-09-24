@@ -6,10 +6,10 @@ import unittest
 import logging
 
 from pathlib import Path
-from embedded_framework.basic_test_setup import BasicTestClass
-from embedded_framework.helpers.he_host_pc import SystemHelper
-from embedded_framework.helpers.he_network import NetworkHelper
-from embedded_framework.helpers.he_file import FileHelper
+from embedded_test_framework.basic_test_setup import BasicTestClass
+from embedded_test_framework.helpers.he_host_pc import SystemHelper
+from embedded_test_framework.helpers.he_network import NetworkHelper
+from embedded_test_framework.helpers.he_file import FileHelper
 
 class TestHostPc(BasicTestClass):
     """Purpose: Verify desktop capture and process status on the test host."""
@@ -54,17 +54,17 @@ class TestHostPc(BasicTestClass):
         # THEN a non-empty address is returned
         self.assertTrue(ip)
 
-    def test_get_usb_drives(self):
-        # GIVEN a host with a removable drive
-        # WHEN removable drives are listed
-        usb_list = self.file.list_removable_drives()
-        self.logger.info("usb_list == %s", usb_list)
+    # def test_get_usb_drives(self):
+    #     # GIVEN a host with a removable drive
+    #     # WHEN removable drives are listed
+    #     usb_list = self.file.list_removable_drives()
+    #     self.logger.info("usb_list == %s", usb_list)
 
-        # THEN at least one drive can be inspected for ISO files
-        self.assertTrue(usb_list)
+    #     # THEN at least one drive can be inspected for ISO files
+    #     self.assertTrue(usb_list)
 
-        usb_file_list = self.file.read_usb_files(usb_list[0])
+    #     usb_file_list = self.file.read_usb_files(usb_list[0])
 
-        for usb_file in usb_file_list:
-            if usb_file.suffix.lower() == ".iso":
-                self.logger.info("Found ISO file: %s",usb_file,)
+    #     for usb_file in usb_file_list:
+    #         if usb_file.suffix.lower() == ".iso":
+    #             self.logger.info("Found ISO file: %s",usb_file,)

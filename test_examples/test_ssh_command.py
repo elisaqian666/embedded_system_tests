@@ -1,6 +1,6 @@
 """Purpose: Demonstrate a system test that executes and validates an SSH command."""
 
-from embedded_framework.embedded_test_base import EmbeddedTestCase
+from embedded_test_framework.embedded_test_base import EmbeddedTestCase
 
 class TestSshCommand(EmbeddedTestCase):
     """Purpose: Verify that an SSH DUT executes a command successfully."""

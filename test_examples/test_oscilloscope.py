@@ -3,8 +3,8 @@
 import os
 from unittest import SkipTest
 
-from embedded_framework.embedded_test_base import EmbeddedTestCase
-from embedded_framework.instruments import Oscilloscope
+from embedded_test_framework.embedded_test_base import EmbeddedTestCase
+from embedded_test_framework.instruments import Oscilloscope
 
 class TestOscilloscopeReference(EmbeddedTestCase):
     """Use the standard system-test lifecycle for the shared oscilloscope."""

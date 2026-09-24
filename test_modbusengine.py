@@ -1,4 +1,4 @@
-from embedded_framework.communication.modbusengine import ModbusRtuEngine
+from embedded_test_framework.communication.modbusengine import ModbusRtuEngine
 
 
 class _Serial:
