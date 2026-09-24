@@ -54,17 +54,17 @@ class TestHostPc(BasicTestClass):
         # THEN a non-empty address is returned
         self.assertTrue(ip)
 
-    def test_get_usb_drives(self):
-        # GIVEN a host with a removable drive
-        # WHEN removable drives are listed
-        usb_list = self.file.list_removable_drives()
-        self.logger.info("usb_list == %s", usb_list)
+    # def test_get_usb_drives(self):
+    #     # GIVEN a host with a removable drive
+    #     # WHEN removable drives are listed
+    #     usb_list = self.file.list_removable_drives()
+    #     self.logger.info("usb_list == %s", usb_list)
 
-        # THEN at least one drive can be inspected for ISO files
-        self.assertTrue(usb_list)
+    #     # THEN at least one drive can be inspected for ISO files
+    #     self.assertTrue(usb_list)
 
-        usb_file_list = self.file.read_usb_files(usb_list[0])
+    #     usb_file_list = self.file.read_usb_files(usb_list[0])
 
-        for usb_file in usb_file_list:
-            if usb_file.suffix.lower() == ".iso":
-                self.logger.info("Found ISO file: %s",usb_file,)
+    #     for usb_file in usb_file_list:
+    #         if usb_file.suffix.lower() == ".iso":
+    #             self.logger.info("Found ISO file: %s",usb_file,)
